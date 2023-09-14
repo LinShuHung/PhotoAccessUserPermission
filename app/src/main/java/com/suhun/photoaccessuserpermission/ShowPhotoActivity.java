@@ -21,8 +21,10 @@ public class ShowPhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_photo);
         initView();
         myAppData = (MyAppData) getApplication();
-        path.setText(myAppData.data.get(myAppData.currentIndex).get("imagePathKey"));
-        img.setImageBitmap(BitmapFactory.decodeFile(myAppData.data.get(myAppData.currentIndex).get("imagePathKey")));
+        if(myAppData.data.size() > 0){
+            path.setText(myAppData.data.get(myAppData.currentIndex).get("imagePathKey"));
+            img.setImageBitmap(BitmapFactory.decodeFile(myAppData.data.get(myAppData.currentIndex).get("imagePathKey")));
+        }
     }
 
     private void initView(){
