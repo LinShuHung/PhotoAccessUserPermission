@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToShowImageFun(View view){
-
+        Intent intent = new Intent(this, ShowPhotoActivity.class);
+        startActivity(intent);
     }
 }

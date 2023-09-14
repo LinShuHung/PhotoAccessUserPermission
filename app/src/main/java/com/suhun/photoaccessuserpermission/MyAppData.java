@@ -9,4 +9,5 @@ import java.util.HashMap;
 public class MyAppData extends Application {
     public ArrayList<HashMap<String, String>> data = new ArrayList<>();
     public ContentResolver contentResolver;
+    public int currentIndex = 0;
 }
